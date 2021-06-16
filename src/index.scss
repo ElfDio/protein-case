@@ -1,0 +1,228 @@
+.box{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .container{
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    border: 10px solid #2f5227;
+
+    //elmaların pozisyonları.
+    .apple{
+      width: 5% !important;
+      position: absolute;
+      color: red;
+      z-index: 1;
+  
+      &.item1{
+        top: 30%;
+        left: 65%;
+      }
+      &.item2{
+        left: 30%;
+        top: 40%;      
+      }
+      &.item3{
+        right: 41%;
+        top: 30%;
+      }
+      &.item4{
+        top: 38%;
+        right: 51%;
+      }
+      &.item5{
+        top: 35%;
+        right: 60%;
+      }
+      &.item6{
+        top: 30%;
+        right: 50%;
+      }
+      &.item7{
+        top: 35%;
+        left: 50%;
+      }
+      &.item8{
+        top: 37%;
+        left: 68%;
+      }
+      &.point {
+        animation : shake 0.8s linear infinite;
+      }
+      //elmaların düşerken alacakları pozisyonları.
+      &.fallen {
+        &.item1{
+          top: 84%;
+          left: 50%;
+          transition: .1s ease-in;
+          transform: rotate(45deg);
+        }
+        &.item2{
+          top: 85%;
+          left: 34%;
+          transition: .1s ease-in;     
+          transform: rotate(15deg);
+        }
+        &.item3{
+          top: 85%;
+          right: 38%;
+          transition: .1s ease-in;
+          transform: rotate(45deg);
+        }
+        &.item4{
+          top: 85%;
+          transition: 1s ease-in;
+          transform: rotate(100deg);
+        }
+        &.item5{
+          top: 85%;
+          right: 40%;
+          transition: 1s ease-in;
+          transform: rotate(27deg );
+        }
+        &.item6{
+          top: 84%;
+          right: 35%;
+          transition: 1s ease-in;
+          transform: rotate(45deg);
+        }
+        &.item7{
+          top: 84%;
+          transition: .5s ease-in;
+          transform: rotate(45deg);
+        }
+        &.item8{
+          top: 84%;
+          left: 40%;
+          transition: .5s ease-in;
+          transform: rotate(45deg);
+        }
+        &.point {
+          animation : shake 0.8s linear infinite;
+        }
+      }
+  
+    }
+    .tree{
+      position: absolute;
+      cursor: pointer;
+      width: 100%;
+    }
+    .bag{
+      width: 35%;
+      position: absolute;
+      bottom: 0;
+      z-index: 2;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+}
+
+//ağaca tıkladığında çalışacak animasyon.
+.point {
+  animation : shake2 0.8s linear infinite;
+}
+
+.boxes{
+  animation : boxes 0.8s linear infinite;
+}
+
+    
+//elmaların animasyonu.
+@keyframes shake {
+  0% { 
+    transform: translate(2px, 1px) rotate(0deg); 
+  }
+  10% { 
+    transform: translate(-1px, -2px) rotate(-2deg); 
+  }
+  20% { 
+    transform: translate(-3px, 0px) rotate(3deg); 
+  }
+  30% { 
+    transform: translate(0px, 2px) rotate(0deg); 
+  }
+  40% { 
+    transform: translate(1px, -1px) rotate(1deg); 
+  }
+  50% { 
+    transform: translate(-1px, 2px) rotate(-1deg); 
+  }
+  60% { 
+    transform: translate(-3px, 1px) rotate(0deg); 
+  }
+  70% { 
+    transform: translate(2px, 1px) rotate(-2deg);
+  }
+  80% { 
+    transform: translate(-1px, -1px) rotate(4deg); 
+  }
+  90% { 
+    transform: translate(2px, 2px) rotate(0deg); 
+  }
+  100%{ 
+    transform: translate(1px, -2px) rotate(-1deg); 
+  }
+}
+//ağacın animasyonu.
+@keyframes shake2 {
+  0% {
+    transform: translate(3px, 0);
+  }
+  50% {
+    transform: translate(-3px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+//sepetin animasyonu.
+@keyframes boxes {
+  0% {
+    transform: translate(3px, 0);
+  }
+  50% {
+    transform: translate(-3px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+
+//ağacın svgsi.
+.st0{fill:#2F5227;}
+.st1{fill:#618E2F;}
+.st2{fill:#6A4235;}
+.st3{opacity:0.5;fill:#6A4235;}
+.st4{fill:#855745;}
+.st5{opacity:0.4;fill:#6A4235;}
+.st6{fill:#BD7D6A;}
+.st7{opacity:0.3;fill:#341A0F;}
+.st8{fill:#96624E;}
+.st9{fill:#008244;}
+.st10{opacity:0.7;}
+.st11{fill:#469D47;}
+.st12{fill:#9EA8AA;}
+.st13{opacity:0.6;fill:#9EA8AA;}
+.st14{opacity:0.7;fill:#9EA8AA;}
+.st15{fill:#7E8B8C;}
+.st16{opacity:0.5;fill:#9EA8AA;}
+.st17{opacity:0.3;fill:#868E90;}
+.st18{fill:#8BAC3E;}
+.st19{fill:#859A27;}
+.st20{fill:#8FC043;}
+.st21{fill:#AECB3B;}
+
